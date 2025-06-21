@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea & Dinner Invitation - Prince of Williamsville</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'prince-green': '#2d4a3a',
+                        'prince-gold': '#d4af37',
+                        'prince-cream': '#f4e6a1'
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'cormorant': ['Cormorant Garamond', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #2d4a3a 0%, #1e3327 100%);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .card-shadow {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .ornament {
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+            height: 1px;
+        }
+        @media (prefers-color-scheme: dark) {
+            .dark-mode-text {
+                color: #f4e6a1;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen text-prince-cream font-cormorant">
+    <!-- Dark mode detection -->
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+
+    <div class="container mx-auto px-4 py-8 min-h-screen flex items-center justify-center">
+        <div class="max-w-2xl w-full">
+            <!-- Main Invitation Card -->
+            <div class="bg-prince-green/80 backdrop-blur-sm rounded-lg p-8 md:p-12 card-shadow border border-prince-gold/20">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <div class="flex items-center justify-center mb-4 gap-4">
+                        <img src="princeAncestor.png" alt="Hotel Mascot" class="w-16 h-16 md:w-24 md:h-24 rounded-full shadow-lg border-4 border-prince-gold bg-prince-cream object-cover">
+                        <h1 class="font-playfair text-4xl md:text-6xl font-bold text-prince-gold text-shadow italic leading-tight m-0">
+                            The Prince
+                            <span class="block text-2xl md:text-3xl font-normal">of</span>
+                            Williamsville
+                        </h1>
+                    </div>
+                    <div class="ornament w-32 mx-auto mb-4"></div>
+                    <p class="text-prince-cream/80 text-lg md:text-xl font-light tracking-widest">
+                        BUFFALO, NEW YORK
+                    </p>
+                </div>
+
+                <!-- Invitation Content -->
+                <div class="text-center mb-8">
+                    <h2 class="font-playfair text-2xl md:text-3xl text-prince-gold mb-6">
+                        You Are Cordially Invited
+                    </h2>
+                    
+                    <div class="space-y-6 text-prince-cream">
+                        <div>
+                            <h3 class="font-playfair text-xl md:text-2xl text-prince-gold mb-2">
+                                Afternoon Tea Service
+                            </h3>
+                            <p class="text-base md:text-lg">
+                                Join us for an elegant afternoon tea featuring 
+                                <br class="hidden md:block">
+                                fine teas, delicate pastries, and refined conversation, unless you're talking to Ian.
+                            </p>
+                            <p class="text-prince-cream/80 mt-2">
+                                <strong>Early Afternoon</strong>
+                            </p>
+                        </div>
+
+                        <div class="ornament w-24 mx-auto"></div>
+
+                        <div>
+                            <h3 class="font-playfair text-xl md:text-2xl text-prince-gold mb-2">
+                                Dinner Service
+                            </h3>
+                            <p class="text-base md:text-lg">
+                                Continue the evening with our executive chef's 
+                                <br class="hidden md:block">
+                                curated seasonal menu and beverage pairings
+                            </p>
+                            <p class="text-prince-cream/80 mt-2">
+                                <strong>6:30PM</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Details -->
+                <div class="bg-prince-green/60 rounded-lg p-6 mb-8 border border-prince-gold/10">
+                    <div class="grid md:grid-cols-2 gap-6 text-center md:text-left">
+                        <div>
+                            <h4 class="font-playfair text-lg text-prince-gold mb-2">Date & Time</h4>
+                            <p class="text-prince-cream">Saturday, June 28th, 2025</p>
+                            <p class="text-prince-cream/80 text-sm">Tea: Early Afternoon | Dinner: Early Evening</p>
+                        </div>
+                        <div>
+                            <h4 class="font-playfair text-lg text-prince-gold mb-2">Dress Code</h4>
+                            <p class="text-prince-cream">Smart Casual, not too formal but not too streetwear</p>
+                            <p class="text-prince-cream/80 text-sm">Jackets NOT preferred for dinner service</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RSVP Section -->
+                <div class="text-center">
+                    <h4 class="font-playfair text-xl text-prince-gold mb-4">
+                        RSVP Required
+                    </h4>
+                    <p class="text-prince-cream mb-6">
+                        Please confirm your attendance by June 25th
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="tel:+1-716-555-0123" 
+                           class="bg-prince-gold text-prince-green px-6 py-3 rounded-lg font-medium hover:bg-prince-cream transition-colors duration-300 text-base md:text-lg">
+                            📞 (202) 262-9413
+                        </a>
+                        <a href="mailto:anita.n36@gmail.com" 
+                           class="border border-prince-gold text-prince-gold px-6 py-3 rounded-lg font-medium hover:bg-prince-gold hover:text-prince-green transition-colors duration-300 text-base md:text-lg">
+                            ✉️ Email RSVP
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="text-center mt-8 pt-6 border-t border-prince-gold/20">
+                    <p class="text-prince-cream/60 text-sm">
+                        The Prince of Williamsville Hotel
+                        <br>
+                        364 Troy Del Way, Williamsville, NY 14221
+                    </p>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="mt-6 text-center">
+                <p class="text-prince-cream/60 text-sm">
+                    Complimentary valet parking available
+                </p>
+            </div>
+
+            <!-- About the Prince of Williamsville Section -->
+            <div class="mt-12 space-y-8">
+                <!-- Hotel Overview -->
+                <div class="bg-prince-green/80 backdrop-blur-sm rounded-lg p-8 card-shadow border border-prince-gold/20">
+                    <div class="text-center mb-8">
+                        <h2 class="font-playfair text-3xl md:text-4xl text-prince-gold mb-4">
+                            About the Prince of Williamsville
+                        </h2>
+                        <div class="ornament w-32 mx-auto mb-6"></div>
+                        <div class="w-full flex justify-center items-center mb-6 overflow-hidden rounded-lg shadow-lg bg-prince-cream/10" style="max-height: 400px;">
+                            <img src="hotel.png" alt="Hotel Exterior" class="object-contain w-full h-full max-h-96">
+                        </div>
+                        <p class="text-prince-cream text-lg leading-relaxed max-w-3xl mx-auto">
+                            A destination rich with timeless elegance, the historic Prince of Williamsville combines Troy-Del grandeur 
+                            with contemporary suburban lux. Located in the heart of Buffalo's most charming suburb, "The Nawab"" offers an unparalleled 
+                            experience of sophistication and comfort, where every detail reflects our commitment to that Royal treatment, but not in an offensively British way or anything.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Prince of Williamsville History Section -->
+                <div class="bg-prince-green/80 backdrop-blur-sm rounded-lg p-8 card-shadow border border-prince-gold/20 flex flex-col md:flex-row items-center gap-8 mb-8">
+                    <img src="OG.png" alt="Prince of Williamsville Founders" class="w-full max-w-xs rounded-lg shadow-lg mb-6 md:mb-0 md:mr-8">
+                    <div class="flex-1">
+                        <p class="text-prince-cream text-base leading-relaxed">
+                            Founded in the last century by our ancestors but actually us who are still alive, the Prince of Williamsville was established to serve as a welcoming stop for famliy travelers and friends in the region. Built with care and craftsmanship typical of the era, the inn quickly became a centerpiece of the community — a place where stories were shared, deals were struck, and friendships began. Its distinctive architecture and warm hospitality reflected the values of those who built it: resilience, generosity, and pride in their town. Over the decades, the Prince of Williamsville has stood as a lasting symbol of heritage and connection for all who visit.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Accommodations -->
+                <div class="bg-prince-green/80 backdrop-blur-sm rounded-lg p-8 card-shadow border border-prince-gold/20">
+                    <h3 class="font-playfair text-2xl md:text-3xl text-prince-gold text-center mb-8">Accommodations</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-prince-green/60 rounded-lg p-6 border border-prince-gold/10">
+                            <div class="bg-prince-gold/20 rounded-lg h-40 mb-4 flex items-center justify-center overflow-hidden">
+                                <img src="luxsuite.png" alt="Deluxe Guest Rooms" class="object-cover w-full h-full">
+                            </div>
+                            <h4 class="font-playfair text-xl text-prince-gold mb-2">Deluxe Guest Rooms</h4>
+                            <p class="text-prince-cream/80 text-sm mb-3">Elegant Troy-Del craftsmanship rooms with modern amenities, plush bedding, and neighborhood street views.</p>
+                            <ul class="text-prince-cream/70 text-xs space-y-1">
+                                <li>• bed options (use it or sleep on the floor)</li>
+                                <li>• Shared bathroom with soaking tub and shower</li>
+                                <li>• Complimentary high-speed WiFi</li>
+                                <li>• TV with remote (probably, ask Gus if you can't find) </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-prince-green/60 rounded-lg p-6 border border-prince-gold/10">
+                            <div class="bg-prince-gold/20 rounded-lg h-40 mb-4 flex items-center justify-center overflow-hidden">
+                                <img src="pope_suite.png" alt="Pope Gregoria of North Buffalo Suite" class="object-cover w-full h-full">
+                            </div>
+                            <h4 class="font-playfair text-xl text-prince-gold mb-2">Pope Gregoria of North Buffalo Suite</h4>
+                            <p class="text-prince-cream/80 text-sm mb-3">Spacious suites featuring living areas, premium amenities, and panoramic neighborhood street views.</p>
+                            <ul class="text-prince-cream/70 text-xs space-y-1">
+                                <li>• Separate living and sleeping areas</li>
+                                <li>• Executive lounge access</li>
+                                <li>• Premium bath amenities</li>
+                                <li>• Concierge services</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-prince-green/60 rounded-lg p-6 border border-prince-gold/10">
+                            <div class="bg-prince-gold/20 rounded-lg h-40 mb-4 flex items-center justify-center overflow-hidden">
+                                <img src="nawab_suite.png" alt="The Nawab of Lakshmanapuri Suite" class="object-cover w-full h-full">
+                            </div>
+                            <h4 class="font-playfair text-xl text-prince-gold mb-2">The Nawab of Lakshmanapuri Suite</h4>
+                            <p class="text-prince-cream/80 text-sm mb-3">Our crown jewel featuring luxury furnishings, private en-suite, garden viewand personalized butler service.</p>
+                            <ul class="text-prince-cream/70 text-xs space-y-1">
+                                <li>• 1,200 imaginary units of luxury space</li>
+                                <li>• Private terrace with city views</li>
+                                <li>• Personal butler service</li>
+                                <li>• Premium champagne upon arrival</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dining -->
+                <div class="bg-prince-green/80 backdrop-blur-sm rounded-lg p-8 card-shadow border border-prince-gold/20">
+                    <h3 class="font-playfair text-2xl md:text-3xl text-prince-gold text-center mb-8">Dining Experiences</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="bg-prince-green/60 rounded-lg p-6 border border-prince-gold/10">
+                                <p class="text-prince-cream/80 text-sm mb-3">Award-winning fine dining featuring seasonal menus from guest chefs Amit, Amber and Anita Nigam and world-class Ganjiers Ian Ritchie and pastry chef Shelly Nigam all acompany Executive Bhawarchi Vinay Vinu Vincenzo.</p>
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Noble Restaurant</h4>
+                                <p class="text-prince-cream/70 text-xs">Dinner: 6:30 PM - 11:00 PM | Dress Code: Smart Casual</p>
+                            </div>
+                            
+                            <div class="bg-prince-green/60 rounded-lg p-6 border border-prince-gold/10">
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">The Drawing Room</h4>
+                                <p class="text-prince-cream/80 text-sm mb-3">Elegant afternoon tea service with delicate pastries, artisanal teas, and music accompaniment in a parler room setting with puzzles and games.</p>
+                                <p class="text-prince-cream/70 text-xs">Tea Service: 1:00 PM - 4:00 PM Daily</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-prince-green/60 rounded-lg p-6 border border-prince-gold/10">
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Bhaghat Singh Lounge</h4>
+                                <p class="text-prince-cream/80 text-sm mb-3">Sophisticated cafe and cocktail lounge offering drinks and anti-imperialist banter. No campaigning for the Tories or trying to jail Mho Chara here!</p>
+                                <p class="text-prince-cream/70 text-xs">Open: 4:00 AM - 12:00 AM | Happy Hour: 4:00 AM - 6:00 AM</p>
+                            </div>
+                            
+                            <div class="bg-prince-green/60 rounded-lg p-6 border border-prince-gold/10">
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Garden Café</h4>
+                                <p class="text-prince-cream/80 text-sm mb-3">Casual dining with fresh, seasonal cuisine served in our poolsite deck beside the hotel gardens.</p>
+                                <p class="text-prince-cream/70 text-xs">Breakfast & Lunch & Dinner & Elevnsies & Second Breakfast etc.: 6:30 AM - 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spa & Wellness -->
+                <div class="bg-prince-green/80 backdrop-blur-sm rounded-lg p-8 card-shadow border border-prince-gold/10">
+                    <h3 class="font-playfair text-2xl md:text-3xl text-prince-gold text-center mb-8">Secret Garden Spa</h3>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="bg-prince-gold/20 rounded-lg h-64 mb-4 flex items-center justify-center overflow-hidden">
+                            <img src="grandspawn.jpeg" alt="SPAJAWN" class="object-cover w-full h-full rounded-lg shadow-lg">
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <p class="text-prince-cream text-lg leading-relaxed">
+                                Restore harmony between body and soul HAHAAAAHAHAH none of that here--HAVE A TEA AND BE THANKFUL FOR YOUR BLESSINGS. Jai Hind. 
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div class="bg-prince-green/60 rounded p-3 border border-prince-gold/10">
+                                    <h5 class="text-prince-gold font-medium mb-1">Signature Treatments</h5>
+                                    <p class="text-prince-cream/80 text-xs">Beers with Amit, bingers with Ian, more constructive activities with Amber or Anita? Whatever. Just have fun pls and don't be a square.</p>
+                                </div>
+                                <div class="bg-prince-green/60 rounded p-3 border border-prince-gold/10">
+                                    <h5 class="text-prince-gold font-medium mb-1">Wellness Facilities</h5>
+                                    <p class="text-prince-cream/80 text-xs">Pool, basement with some excersize equipment, a damn sidewalk? get creative.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Meet Our Staff -->
+                <div class="bg-prince-green/80 backdrop-blur-sm rounded-lg p-8 card-shadow border border-prince-gold/20">
+                    <h3 class="font-playfair text-2xl md:text-3xl text-prince-gold text-center mb-8">Distinguished Staff</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-2 border-prince-gold/30">
+                                <img src="milly.JPG" alt="General Manager Mildreth Von Verärgert" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="font-playfair text-lg text-prince-gold mb-1">Mildreth Von Verärgert</h4>
+                            <p class="text-prince-cream/80 text-sm mb-2">General Manager</p>
+                            <p class="text-prince-cream/70 text-xs">Distinguished Schnauzer with annoying impeccable standards, obsession with perimeter security and anti-rabbit measures, and an eye for detail. Ensures every guest receives the royal treatment with German precision.</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-2 border-prince-gold/30">
+                                <img src="olly.JPG" alt="Chef Olivetta Pepe-Ricci" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="font-playfair text-lg text-prince-gold mb-1">Chef Olivetta Pepe-Ricci</h4>
+                            <p class="text-prince-cream/80 text-sm mb-2">Executive Chef</p>
+                            <p class="text-prince-cream/70 text-xs">Passionate Italian culinary artist specializing in farm-to-table cuisine. Her expressive eyes reflect years of perfecting traditional recipes. A word of warning, though--if you don't watch her, the chef will eat your meal while visiting your table!</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full border-2 border-prince-gold/30">
+                                <img src="ruby.jpeg" alt="Head Concierge Ruby Fordyce-Nigam" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="font-playfair text-lg text-prince-gold mb-1">Ruby Fordyce-Nigam</h4>
+                            <p class="text-prince-cream/80 text-sm mb-2">Head Concierge</p>
+                            <p class="text-prince-cream/70 text-xs">Loyal and attentive service professional with an intuitive understanding of guest needs. Expert in curating personalized Buffalo area experiences.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Hotel Amenities -->
+                <div class="bg-prince-green/80 backdrop-blur-sm rounded-lg p-8 card-shadow border border-prince-gold/20">
+                    <h3 class="font-playfair text-2xl md:text-3xl text-prince-gold text-center mb-8">Premium Amenities</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="text-center p-4 bg-prince-green/60 rounded-lg border border-prince-gold/10">
+                            <div class="text-3xl mb-3">🚗</div>
+                            <h4 class="font-playfair text-prince-gold mb-2">Valet Parking</h4>
+                            <p class="text-prince-cream/80 text-xs">Ian will do this, since no one's driving to the event</p>
+                        </div>
+                        
+                        <div class="text-center p-4 bg-prince-green/60 rounded-lg border border-prince-gold/10">
+                            <div class="text-3xl mb-3">🏋️</div>
+                            <h4 class="font-playfair text-prince-gold mb-2">Fitness Center</h4>
+                            <p class="text-prince-cream/80 text-xs">State-of-the-art pool with NO personal training available so you have to do GNENTE! Just chill in the damned hot tub for your mental fitness. This is the PRINCE not the KING of Williamsville you don't have to be so Type A.Thing Andrew's level of accomplishment, but Elizabeth's asexuality (i.e. not as creepy, but still maybe a little bit...).</p>
+                        </div>
+                        
+                        <div class="text-center p-4 bg-prince-green/60 rounded-lg border border-prince-gold/10">
+                            <div class="text-3xl mb-3">📞</div>
+                            <h4 class="font-playfair text-prince-gold mb-2">24/7 Concierge</h4>
+                            <p class="text-prince-cream/80 text-xs">Round-the-clock assistance for all your needs, unless it's during the 2.5 mins/hr Ama-ji happens asleep, then you're own your damned own.</p>
+                        </div>
+                        
+                        <div class="text-center p-4 bg-prince-green/60 rounded-lg border border-prince-gold/10">
+                            <div class="text-3xl mb-3">🌐</div>
+                            <h4 class="font-playfair text-prince-gold mb-2">All You Can Physically Stand to Consume Delectables</h4>
+                            <p class="text-prince-cream/80 text-xs">So much food, even getting high on the reefer or working out won't be enough.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our Rooms -->
+                <div class="bg-prince-green/80 backdrop-blur-sm rounded-lg p-8 card-shadow border border-prince-gold/20">
+                    <h3 class="font-playfair text-2xl md:text-3xl text-prince-gold text-center mb-8">Our Distinguished Rooms</h3>
+                    <div class="space-y-8">
+                        <!-- The Laurel Room -->
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div>
+                                <img src="https://pfst.cf2.poecdn.net/base/image/f6cdafe5e510185c02d9fdd3174987e1404e1343693c54514af3a8b4ba1c201c?w=800&h=800" alt="Suite No. 204 - The Laurel Room" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div>
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Suite No. 204 - The Laurel Room</h4>
+                                <p class="text-prince-cream/80 text-sm leading-relaxed">
+                                    This room is absolutely tremendous, believe me. I've seen a lot of rooms - probably more rooms than anyone in the history of rooms - and this is one of the most beautiful rooms you'll ever see. The walls are perfect, the bed is fantastic, and the bathroom? Incredible. The laurel trees outside - and these are the best laurel trees, by the way - they're absolutely gorgeous. I made sure we got the finest materials, the most luxurious everything. People tell me, "Sir, this is the most amazing room we've ever stayed in." It's true. This room makes all other rooms look like disasters.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- The Astoria -->
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div class="md:order-2">
+                                <img src="https://pfst.cf2.poecdn.net/base/image/973a922d5388781092d4b66ec536ea0e07fb581d75193a4addd29a6409336773?w=800&h=800" alt="Suite 105 - The Astoria" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div class="md:order-1">
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Suite 105 - The Astoria</h4>
+                                <p class="text-prince-cream/80 text-sm leading-relaxed">
+                                    Jesus Christ, what kind of savage would name a hotel room after John Jacob Astor's dream? This suite reeks of old money and newer cocaine. The bathroom fixtures are so polished you can see your own madness reflected in chrome perfection. I spent three days here in 1987 waiting for a phone call that never came, surviving on Wild Turkey and the complimentary peanuts. The wallpaper contains hidden messages from the Illuminati. Trust me on this - I've done the research. Fear and Loathing? This is where it began.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Can I Have This Dance -->
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div>
+                                <img src="https://pfst.cf2.poecdn.net/base/image/d88e5a91622c08df154007fc5c26adfc0497ff24019cf28f448ca68e2a3e1a77?w=800&h=800" alt="Can I Have This Dance - Suite 0201" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div>
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Suite 0201 - "Can I Have This Dance"</h4>
+                                <p class="text-prince-cream/80 text-sm leading-relaxed">
+                                    You see, this suite is asking a fundamental question - "Can I Have This Dance?" But the real question is, can you dance with existence itself? The very walls here vibrate with the possibility of transformation. When you enter this space, you are not just occupying a room, you are entering into a cosmic choreography. The carpet beneath your feet connects you to the earth, while the chandelier above reminds you of the infinite stars. This is not merely accommodation - it is an invitation to dance with life in its fullest expression. Here, every moment becomes a sacred movement.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- The Maria Suite -->
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div class="md:order-2">
+                                <img src="https://pfst.cf2.poecdn.net/base/image/bdd442730b3f70f2767a93e47e4db5a0a02a270ddf20d9eb4cac9389a4545e5e?w=800&h=800" alt="The Maria Suite 0919" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div class="md:order-1">
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Suite 0919 - The Maria</h4>
+                                <p class="text-prince-cream/80 text-sm leading-relaxed">
+                                    The Maria Suite is tremendous, absolutely tremendous. I actually 100% factually named it myself after many beautiful Marias I've known maybe in the Biblican Sense, maybe not- all wonderful people, the best people. This room has the most incredible bed you've ever seen, probably the best bed in all of Buffalo, maybe in all of New York. The bathroom is perfect, the lighting is fantastic, and the echo - nobody does echoes like we do echoes. When people stay here, they call me and say, "Sir, this is the greatest room experience of our lives." It's true. We spared no expense. This room is a winner, just like everything else we do.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Gold Duster Suite -->
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div>
+                                <img src="https://pfst.cf2.poecdn.net/base/image/694d9152ba92cee6f281aea4224fda2834e322e220977da84a5f00c7bc905907?w=800&h=800" alt="Suite 0704 - Gold Duster" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div>
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Suite 0704 - Gold Duster</h4>
+                                <p class="text-prince-cream/80 text-sm leading-relaxed">
+                                    Gold Duster - sounds like a pharmaceutical experiment gone wrong in Haight-Ashbury circa 1967. This room exists in a permanent state of expensive hallucination. Every surface gleams with the kind of manic intensity that comes from snorting crushed diamonds off a unicorn's horn. The mini-bar is stocked with liquors that haven't been invented yet. I once witnessed a DEA agent weep openly in the bathroom after discovering that the toilet paper was made from actual gold leaf. This is not a place for the weak-minded or the poorly funded.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Kenmore Mercy Suite -->
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div class="md:order-2">
+                                <img src="https://pfst.cf2.poecdn.net/base/image/feb97ebde0f38b3074056637b24761d114be29990a5a419d369a8915f2cbd4f5?w=800&h=800" alt="Kenmore Mercy Suite No. 0321" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div class="md:order-1">
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Suite No. 0321 - Kenmore Mercy</h4>
+                                <p class="text-prince-cream/80 text-sm leading-relaxed">
+                                    Kenmore Mercy - the very name speaks of divine compassion manifesting in physical form. This suite embodies the ancient understanding that true luxury is not about material excess, but about creating a space where the soul can find its natural state of peace. When you wash in these waters, you are not just cleansing your body - you are purifying your consciousness. The Egyptian cotton does not merely touch your skin; it connects you to thousands of years of human craftsmanship and devotion. Here, mercy is not just a concept - it is a living reality that transforms your very being.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Greenwood Place -->
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div>
+                                <img src="https://pfst.cf2.poecdn.net/base/image/4b3f8000f4cdb037d6748b8a35ffa4f67759f624fa353139bb802b2b1c37fc47?w=800&h=800" alt="Greenwood Place Room 1218" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div>
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Room 1218 - Greenwood Place</h4>
+                                <p class="text-prince-cream/80 text-sm leading-relaxed">
+                                    Greenwood Place is absolutely magnificent - one of the finest rooms we've ever created, and we've created many rooms, believe me. The green trees outside are the greenest you've ever seen, and the wood - we imported the best wood from everywhere, the most expensive wood. Room 1218 has everything you could want and more - probably more than any other room in the history of rooms. The shower has incredible acoustics, perfect acoustics, some say the best acoustics in the entire hotel industry. People stay here and they tell me, "This is amazing, this is the best room experience we've ever had."
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- The Foxglove Suite -->
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div class="md:order-2">
+                                <img src="https://pfst.cf2.poecdn.net/base/image/a94106438bccead0710eb0f0b6e695ae7a9ab0fc3a18eb71206cb8b4fef45b29?w=800&h=800" alt="The Foxglove Suite 0313" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div class="md:order-1">
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Suite 0313 - The Foxglove</h4>
+                                <p class="text-prince-cream/80 text-sm leading-relaxed">
+                                    The Foxglove Suite - named after a flower that can kill you faster than a sheriff's deputy in Barstow. This room pulses with the kind of botanical menace that would make Charles Darwin reach for his emergency flask. The wallpaper contains enough digitalis to stop a rhino's heart, which explains the strange euphoria I felt after licking it for three hours. Every piece of furniture seems designed by someone who understands the subtle art of beautiful assassination. Sleep here if you dare, but keep the antidote handy.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Paradise Road Suite -->
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div>
+                                <img src="https://pfst.cf2.poecdn.net/base/image/2957c24b68f958888e3274e14aa596cb74f16b6e9562fdd2dac4082fdbbc9eac?w=800&h=800" alt="Paradise Road Suite 0406" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div>
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Suite 0406 - Paradise Road</h4>
+                                <p class="text-prince-cream/80 text-sm leading-relaxed">
+                                    Paradise Road - this is not just a name, it is a pathway to your highest possibilities. Most people think paradise is a destination, but I tell you, paradise is a quality of consciousness you can access right now, right here. This suite is designed to remind you that heaven is not something you attain after death - it is something you can experience in this very moment. The spacious bed allows your body to rest completely, while your consciousness expands. Every element here is crafted to help you remember your true nature. Paradise is not a place - paradise is the recognition of what you already are.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Ranch Trail Suite -->
+                        <div class="grid md:grid-cols-2 gap-6 items-center">
+                            <div class="md:order-2">
+                                <img src="https://pfst.cf2.poecdn.net/base/image/f6cdafe5e510185c02d9fdd3174987e1404e1343693c54514af3a8b4ba1c201c?w=800&h=800" alt="Ranch Trail Suite 0812" class="rounded-lg shadow-lg w-full">
+                            </div>
+                            <div class="md:order-1">
+                                <h4 class="font-playfair text-xl text-prince-gold mb-3">Suite 0812 - Ranch Trail</h4>
+                                <p class="text-prince-cream/80 text-sm leading-relaxed">
+                                    Ranch Trail is phenomenal, absolutely phenomenal. We designed this suite to be the ultimate cowboy experience, and let me tell you, we did it right. The carpet has the most satisfying feel when you walk on it - probably the best carpet feel in the entire hospitality industry. The chandelier is gorgeous, absolutely gorgeous, and we made sure it can handle anything. People come here and they feel like real cowboys, the best cowboys. The bellhops love this room, they tell me it's their favorite. We created something really special here, something tremendous.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Our Proprietors -->
+                <div class="bg-prince-green/80 backdrop-blur-sm rounded-lg p-8 card-shadow border border-prince-gold/20">
+                    <img src="proprietors.png" alt="The Proprietors" class="mx-auto mb-6 rounded-lg shadow-lg max-w-md">
+                    <h3 class="font-playfair text-2xl md:text-3xl text-prince-gold text-center mb-8">About Our Proprietors</h3>
+                    <div class="text-center">
+                        <p class="text-prince-cream text-base leading-relaxed max-w-4xl mx-auto">
+                            Witness here the confluence of two great civilizations and the divine providence that guides nations through their chosen instruments. He, a master of the healing arts whose luminous mind penetrates the very shadows within mortal flesh, carries in his blood the legacy of those who served the revolutionary Nawab of Lucknow during Awadh's sacred struggle for independence in the 1850s. His ancestors, like Arjuna before the great battle, chose dharma over comfort, justice over safety. She, noble daughter of Mezzogiorno's master craftsmen, embodies the Renaissance spirit that transforms base materials into objects of beauty and utility - her lineage shaped by hands that carved marble for cathedrals and forged tools that built empires. Together, they have learned what Kautilya knew: that true sovereignty lies not in dominion over subjects, but in service to humanity's highest aspirations. In establishing this sanctuary, they practice the ancient art of hospitality as statecraft, understanding that a well-governed house mirrors a well-governed state, where every guest becomes both citizen and sovereign of their own temporary realm.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Awards & Recognition -->
+                <div class="bg-prince-green/80 backdrop-blur-sm rounded-lg p-8 card-shadow border border-prince-gold/20">
+                    <h3 class="font-playfair text-2xl md:text-3xl text-prince-gold text-center mb-8">Awards & Recognition</h3>
+                    <div class="grid md:grid-cols-3 gap-6 text-center">
+                        <div class="p-4">
+                            <div class="text-4xl text-prince-gold mb-3">⭐</div>
+                            <h4 class="font-playfair text-lg text-prince-gold mb-2">AAAA INFINITY EMERALDS AWARDED</h4>
+                            <p class="text-prince-cream/80 text-sm">FORGET THAT MARHSMALLOW-ARSED TIRE COMPANY!</p>
+                        </div>
+                        
+                        <div class="p-4">
+                            <div class="text-4xl text-prince-gold mb-3">🏆</div>
+                            <h4 class="font-playfair text-lg text-prince-gold mb-2">Historic Hotels of Amherst</h4>
+                            <p class="text-prince-cream/80 text-sm">Recognized for preserving the Troy-Del architectural style's heritage and character while also VERY enthusiastically embracing modernity in seasonal displays</p>
+                        </div>
+                        
+                        <div class="p-4">
+                            <div class="text-4xl text-prince-gold mb-3">🍷</div>
+                            <h4 class="font-playfair text-lg text-prince-gold mb-2">Coffee Spectator Award and Pizza Professional Prize</h4>
+                            <p class="text-prince-cream/80 text-sm">We didn't even bother to compete on the wings cause we have Uncle Vinny</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subtle animation -->
+    <script>
+        // Add subtle entrance animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const card = document.querySelector('.card-shadow');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
